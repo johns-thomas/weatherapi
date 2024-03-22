@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Packaging weatherapi.jar file...
+      - mvn clean package
+  post_build:
+    commands:
+      - echo Build complete.
+artifacts:
+  files:
+    - target/weatherapi.jar
+  discard-paths: yes
